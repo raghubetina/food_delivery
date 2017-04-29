@@ -8,6 +8,10 @@ class Menu < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :food_items,
+             :source => :users
+
   # Validations
 
 end
