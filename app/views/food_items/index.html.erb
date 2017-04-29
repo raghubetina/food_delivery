@@ -17,7 +17,13 @@
 
       <% @food_items.each do |food_item| %>
       <tr>
-        <td><%= food_item.menu.restaurant_id %></td>
+        <td>
+          <% if food_item.menu.present? %>
+            <a href="/menus/<%= food_item.menu.id %>">
+              <%= food_item.menu.restaurant_id %>
+            </a>
+          <% end %>
+        </td>
         <td><%= food_item.price %></td>
         <td><img src='<%= food_item.image %>' class='img-responsive'></td>
         <td>
