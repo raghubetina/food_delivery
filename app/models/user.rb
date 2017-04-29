@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :food_items,
+             :through => :bookmarks,
+             :source => :food_item
+
   # Validations
 
   # Include default devise modules. Others available are:
