@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :restaurants,
+             :through => :menus,
+             :source => :restaurant
+
   has_many   :menus,
              :through => :food_items,
              :source => :menu
