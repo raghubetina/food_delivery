@@ -19,7 +19,7 @@
       <tr>
         <td><%= food_item.menu.restaurant_id %></td>
         <td><%= food_item.price %></td>
-        <td><%= food_item.image %></td>
+        <td><img src='<%= food_item.image %>' class='img-responsive'></td>
         <td>
           <a href="/food_items/<%= food_item.id %>" class="btn btn-primary">Show</a>
           <a href="/food_items/<%= food_item.id %>/edit" class="btn btn-warning">Edit</a>
